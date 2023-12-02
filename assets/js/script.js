@@ -104,3 +104,11 @@ function slideRight() {
     }
   }
 }
+
+function slideUp() {
+  //soon
+}
+
+function slideDown() {
+  //soon
+}
