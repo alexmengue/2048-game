@@ -27,7 +27,12 @@ function setGame() {
 };
 
 function setTwo() {
-  //soon
+  let found = false;
+
+  while (!found) {
+    let r = Math.floor(Math.random() * rows);
+    let c = Math.floor(Math.random() * columns);
+  }
 }
 
 function updateTile(tile, num) {
