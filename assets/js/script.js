@@ -26,6 +26,10 @@ function setGame() {
   }
 };
 
+function setTwo() {
+  //soon
+}
+
 function updateTile(tile, num) {
   tile.innerText = '';
   tile.classList.value = '';
