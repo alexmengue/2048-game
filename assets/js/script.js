@@ -27,6 +27,10 @@ function setGame() {
 };
 
 function setTwo() {
+  if (!hasEmptyTile()) {
+    //soon
+  }
+
   let found = false;
 
   while (!found) {
