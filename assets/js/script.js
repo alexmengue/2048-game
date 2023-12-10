@@ -26,10 +26,13 @@ function setGame() {
   }
 };
 
+function hasEmptyTile() {
+  //soon
+};
+
 function setTwo() {
   if (!hasEmptyTile()) {
-    //soon
-    //function to add tiles with 2
+    return;
   }
 
   let found = false;
@@ -46,7 +49,7 @@ function setTwo() {
       found = true;
     }
   }
-}
+};
 
 function updateTile(tile, num) {
   tile.innerText = '';
@@ -61,7 +64,7 @@ function updateTile(tile, num) {
       tile.classList.add('x8192');
     }
   }
-}
+};
 
 document.addEventListener('keyup', (event) => {
   if (event.code === 'ArrowLeft') {
@@ -103,7 +106,7 @@ function slide(row) {
   }
 
   return row;
-}
+};
 
 function slideLeft() {
   for (let r = 0; r < rows; r++) {
@@ -117,7 +120,7 @@ function slideLeft() {
       updateTile(tile, num);
     }
   }
-}
+};
 
 function slideRight() {
   for (let r = 0; r < rows; r++) {
@@ -133,7 +136,7 @@ function slideRight() {
       updateTile(tile, num);
     }
   }
-}
+};
 
 function slideUp() {
   for (let c = 0; c < columns; c++) {
@@ -150,7 +153,7 @@ function slideUp() {
       updateTile(tile, num);
     }
   }
-}
+};
 
 function slideDown() {
   for (let c = 0; c < columns; c++) {
@@ -170,4 +173,4 @@ function slideDown() {
       updateTile(tile, num);
     }
   }
-}
+};
