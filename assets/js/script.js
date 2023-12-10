@@ -29,6 +29,7 @@ function setGame() {
 function setTwo() {
   if (!hasEmptyTile()) {
     //soon
+    //function to add tiles with 2
   }
 
   let found = false;
