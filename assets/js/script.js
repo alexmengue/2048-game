@@ -80,18 +80,22 @@ function updateTile(tile, num) {
 document.addEventListener('keyup', (event) => {
   if (event.code === 'ArrowLeft') {
     slideLeft();
+    setTwo();
   }
 
   else if (event.code === 'ArrowRight') {
     slideRight();
+    setTwo();
   }
 
   else if (event.code === 'ArrowUp') {
     slideUp();
+    setTwo();
   }
 
   else if (event.code === 'ArrowDown') {
     slideDown();
+    setTwo();
   }
 });
 
