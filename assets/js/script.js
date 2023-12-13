@@ -97,6 +97,8 @@ document.addEventListener('keyup', (event) => {
     slideDown();
     setTwo();
   }
+
+  document.getElementById('score').innerText = score;
 });
 
 function filterZero(row) {
@@ -176,10 +178,10 @@ function slideDown() {
     row.reverse();
     row = silde(row);
     row.reverse();
-    // board[0][c] = row[0];
-    // board[1][c] = row[1];
-    // board[2][c] = row[2];
-    // board[3][c] = row[3];
+    board[0][c] = row[0];
+    board[1][c] = row[1];
+    board[2][c] = row[2];
+    board[3][c] = row[3];
 
     for (let r = 0; r < rows; r++) {
       board[r][c] = row[r];
