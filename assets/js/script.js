@@ -24,12 +24,13 @@ function setGame() {
       document.getElementById('board').append(tile);
     }
   }
+
+  setTwo();
+  setTwo();
 };
 
-setTwo();
-setTwo();
-
 function hasEmptyTile() {
+  let count = 0;
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns; c++) {
       if (board[r][c] === 0) {
@@ -68,7 +69,7 @@ function updateTile(tile, num) {
   tile.classList.add('tile');
 
   if (num > 0) {
-    tile.innerText = num;
+    tile.innerText = num.toString();
     if (num <= 4096) {
       tile.classList.add('x' + num.toString());
     } else {
@@ -145,7 +146,7 @@ function slideRight() {
     row.reverse();
     row = slide(row);
     row.reverse();
-    board[r] = row;
+    board[r] = row.reverse();
 
     for (let c = 0; c < columns; c++) {
       let tile = document.getElementById(r.toString() + '-' + c.toString());
@@ -158,13 +159,14 @@ function slideRight() {
 function slideUp() {
   for (let c = 0; c < columns; c++) {
     let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
-    row = silde(row);
-    board[0][c] = row[0];
-    board[1][c] = row[1];
-    board[2][c] = row[2];
-    board[3][c] = row[3];
+    row = slide(row);
+    // board[0][c] = row[0];
+    // board[1][c] = row[1];
+    // board[2][c] = row[2];
+    // board[3][c] = row[3];
 
     for (let r = 0; r < rows; r++) {
+      board[r][c] = row[r];
       let tile = document.getElementById(r.toString() + '-' + c.toString());
       let num = board[r][c];
       updateTile(tile, num);
@@ -176,12 +178,12 @@ function slideDown() {
   for (let c = 0; c < columns; c++) {
     let row = [board[0][c], board[1][c], board[2][c], board[3][c]];
     row.reverse();
-    row = silde(row);
+    row = slide(row);
     row.reverse();
-    board[0][c] = row[0];
-    board[1][c] = row[1];
-    board[2][c] = row[2];
-    board[3][c] = row[3];
+    // board[0][c] = row[0];
+    // board[1][c] = row[1];
+    // board[2][c] = row[2];
+    // board[3][c] = row[3];
 
     for (let r = 0; r < rows; r++) {
       board[r][c] = row[r];
