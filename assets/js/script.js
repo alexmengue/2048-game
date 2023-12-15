@@ -1,5 +1,5 @@
 let board;
-let score;
+let score = 0;
 let rows = 4;
 let columns = 4;
 
